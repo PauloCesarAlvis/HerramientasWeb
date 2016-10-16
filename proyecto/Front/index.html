@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" href="css/index.css">
+	      <!--  ACA SE PEGA LA LINEA DE IMPORTACION DE JQERY DESDE LA PAGINA  -->
+ <script
+              src="https://code.jquery.com/jquery-3.1.1.js"
+              integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+              crossorigin="anonymous"></script>
+		
+
+             <!-- Se importa bootstrap-->
+             <!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!--Se importa el javascript -->
+ 
+<!-- Se importa la configuracion para responsive-->
+<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+
+	<title>Inicio</title>
+</head>
+<body>
+
+<div class="imagPrincipal">
+	<img src="img/login.png" alt="">
+</div>
+
+	<form id="formulario">
+		<p>
+		<label for="name">Name</label>
+		<input id="name" class="validate" type="text" name="nombre">
+		</p>
+
+		<p>
+		<label for="pass">Password</label>
+		<input id="pass" class="validate" type="password" name="pass">
+		</p>
+
+		<p>
+		<input id="botonLogin" value="Ingresar" type="button">
+		</p>
+	
+		<input id="username" type="text">
+
+		<a href="https://github.com/PauloCesarAlvis/HerramientasWeb">Iniciar sesión con GitHub	</a>
+	</form>
+
+<script>
+function $_GET(param)
+{
+/* Obtener la url completa */
+url = document.URL;
+/* Buscar a partir del signo de interrogación ? */
+url = String(url.match(/\?+.+/));
+/* limpiar la cadena quitándole el signo ? */
+url = url.replace("?", "");
+/* Crear un array con parametro=valor */
+url = url.split("&");
+
+/* 
+Recorrer el array url
+obtener el valor y dividirlo en dos partes a través del signo = 
+0 = parametro
+1 = valor
+Si el parámetro existe devolver su valor
+*/
+x = 0;
+while (x < url.length)
+{
+p = url[x].split("=");
+if (p[0] == param)
+{
+return decodeURIComponent(p[1]);
+}
+x++;
+}
+}
+
+
+
+ var codigoIngreso = ($_GET("code"));
+
+if (codigoIngreso != null ) {
+	alert("Aca se redirecciona a la pagin de est o doc");
+}
+</script>
+
+
+	<script>
+	$('#botonLogin').click(function () {
+	window.open('https://github.com' + 
+		'/login/oauth/authorize' + 
+		'?client_id=68703385219c37125ce4' +
+		'&scope=gist');
+});
+
+	window.addEventListener('message', function (event) {
+	var code = event.data;
+	$('#code').val(code);
+
+	// Step 5
+	$.get('token.php?code=' + code, function (access_token) {
+		// Step 7
+		alert(access_token);
+		$('#access_token').val(access_token);
+
+		$.getJSON('https://api.github.com/user?access_token=' + access_token, function (user) {
+			alert(user.login);
+			$('#username').val(user.login);	
+		});
+	});
+});
+</script>
+</body>
+</html>
