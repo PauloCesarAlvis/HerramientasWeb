@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" href="css/seleccionPerfil.css">
+	      <!--  ACA SE PEGA LA LINEA DE IMPORTACION DE JQERY DESDE LA PAGINA  -->
+ <script
+              src="https://code.jquery.com/jquery-3.1.1.js"
+              integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+              crossorigin="anonymous"></script>
+		
+
+             <!-- Se importa bootstrap-->
+             <!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!--Se importa el javascript -->
+ 
+<!-- Se importa la configuracion para responsive-->
+<meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+
+	<title>Selección de Perfil</title>
+</head>
+<body>
+
+<div class="principal">
+	<div class="col-md-6">
+		<input id="botonEstudiante" type=image src="img/student.png">
+		<h3>Soy estudiante</h3>
+	</div>
+	<div class="col-md-6">
+		<input id="botonDocente"  type=image src="img/docenteIcon.png">
+		<h3>Soy docente</h3>
+		</div>
+</div>
+
+	<script>
+	$('#botonDocente').click(function () {
+	//aca se redirecciona a la pagina deseada desde el boton
+	window.location.href = "http://localhost/proyecto/Front/perfilDocente.html";
+
+});
+
+		$('#botonEstudiante').click(function () {
+	//aca se redirecciona a la pagina deseada desde el boton
+	window.location.href = "http://localhost/proyecto/Front/perfilEstudiante.html";
+
+});
+	</script>
+</body>
+</html>
