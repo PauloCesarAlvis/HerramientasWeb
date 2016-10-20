@@ -26,19 +26,29 @@
 </head>
 <body>
 
-<div class="imagPrincipal">
-	<img src="img/login.png" alt="">
+<div class="principal">
+	<div class="col-md-6">
+		<input id="botonEstudiante" type=image src="img/student.png">
+		<h3>Soy estudiante</h3>
+	</div>
+	<div class="col-md-6">
+		<input id="botonDocente"  type=image src="img/docenteIcon.png">
+		<h3>Soy docente</h3>
+		</div>
 </div>
 
-	<form id="Inicio">
-		<p>
-		<label for="name">Aqui va una img para estudiante</label>
-		</p>
+	<script>
+	$('#botonDocente').click(function () {
+	//aca se redirecciona a la pagina deseada desde el boton
+	window.location.href = "http://localhost/proyecto/Front/perfilDocente.html";
 
-		<p>
-		<label for="pass">Aqui va una img para docente</label>
-		</p>
+});
 
-	</form>
+		$('#botonEstudiante').click(function () {
+	//aca se redirecciona a la pagina deseada desde el boton
+	window.location.href = "http://localhost/proyecto/Front/perfilEstudiante.html";
+
+});
+	</script>
 </body>
 </html>

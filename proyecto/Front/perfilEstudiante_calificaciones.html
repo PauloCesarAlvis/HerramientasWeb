@@ -24,55 +24,59 @@
 <!-- Se importa la configuracion para responsive-->
 <meta name="viewport" content="width=devicewidth, initial-scale=1.0">
 
-	<title>Bootstrap</title>
+	<title>Calificaciones</title>
 </head>
 <body>
-	
+	<div class="fluid-container">
+		<div class="row first">
 		<header>
 		<div id="cabIzq"class="col-md-4">
-			<h1>Datos docente</h1>
+			<p><h4>Paulo Cesar Alvis R. <br>
+				pcalvisr@uqvirtual.edu.co</h4></p>
 			<img src="img/user.png" alt="">
 		</div>
 		<div id="cabDer" class="col-md-7">
-				<h1>Aqui va un logo</h1>
+				<h2>Perfil Estudiante</h2>
+				<img src="img/estudiante.png" alt="">
 		</div>
 		</header>
+		</div>
 	
 
 
 
-		
+		<div class="row middle">
 	<div id="izqB" class="izq col-md-2">
-		<form action="index.html">
+		<form action="perfilEstudiante_asignaturas.html">
 		<button class="button" style="vertical-align:middle"><span>Asignaturas </span></button>
 		</form>
-			<form action="index.html">
+			<form action="perfilEstudiante_actividades.html">
 		<button class="button" style="vertical-align:middle"><span>Actividades</span></button>
 		</form>
-			<form action="index.html">
-		<button class="button" style="vertical-align:middle"><span>Calificaciones </span></button>
+			<form action="perfilEstudiante_calificaciones.html">
+		<button id="califi" class="button" style="vertical-align:middle"><span>Calificaciones </span></button>
 		</form>
-			  
+			<form id="inicio" action="seleccionPerfil.html">
+		<button title="Home" class="button" style="vertical-align:middle">
+		<img src="img/home.png" alt="">  </button>
+		</form>	  
 			  	
 			  
 	</div>
 	<div id="cenB" class="izq col-md-6">
-		<h1>Herramientas Web</h1>
+		<br><br><br><br>
+		<br><br><br><br>	
+		<br><br><br><br>		
 
-		<hr>
-
-		<h1>Ingeniería de Software</h1>
-
-		<hr>	
 
 	</div>
 	<div id="derB" class="izq col-md-3">
 	<div class="dropdown">
 				  <button class="dropbtn">Actividades</button>
 				  <div class="dropdown-content">
-				    <a href="#">Link 1</a>
-				    <a href="#">Link 2</a>
-				    <a href="#">Link 3</a>
+				    <a href="#">Actividad 1</a>
+				    <a href="#">Actividad 2</a>
+				    <a href="#">Actividad 3</a>
 				  </div>
 				</div>
 			
@@ -81,22 +85,39 @@
 				<div class="dropdown">
 				  <button class="dropbtn">Mensajes</button>
 				  <div class="dropdown-content">
-				    <a href="#">Link 1</a>
-				    <a href="#">Link 2</a>
-				    <a href="#">Link 3</a>
+				    <a href="#">Mensaje 1</a>
+				    <a href="#">Mensaje 2</a>
+				    <a href="#">Mensaje 3</a>
 				  </div>
 				</div>
 	</div>
+	</div>
 
+	<div class="row footer">
 	
+		<ul id="izq"><li>Unidad de Herramientas Web </li>
+			<li>Universidad del Quindio </li>
+			<li>Carrera 15 Calle 12 Norte</li>
+			<li>Facultad de Ingenieria</li>
+			<li>Armenia, Quindio </li>
 
-	
-	
+			<li>Tel: (6) 7359300</li> </ul>
 
 	
 		
-
 	
+			<ul id="medio"><li><a href="http://academubalan.uniquindio.edu.co/uniquindio/portal/home_1/htm/login.jsp">Academusoft</a></li>
+			<li><a href="https://www.uniquindio.edu.co/">Portal institucional</a> </li>
+			<li><a href="http://virtual1.uniquindio.edu.co/">Recursos de apoyo</a></li>
+			<li><a href="https://www.uniquindio.edu.co/biblioteca/publicaciones/bases_de_datos_pub">Bases de datos</a></li>
+			 </ul>
+		
+		
+		<img id="der"src="img/logouni.png" alt="">
+		
+	</div>
+	</div>
+		
 
 
 </body>
