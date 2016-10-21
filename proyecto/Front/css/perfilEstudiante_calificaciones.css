@@ -126,7 +126,12 @@ margin-right: 8%;
     background-color: #0E06FA;
     color: white;
 }
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+    position: right;
 
+}
 .button {
 display: inline-block;
 border-radius: 4px;
