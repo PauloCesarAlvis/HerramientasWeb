@@ -94,6 +94,14 @@ margin-right: 8%;
     margin-top: 3%;  
     padding-top: 3%;
 }
+.listaMensajes{
+border: double 1px;
+}
+.listaMensajes h4{
+  text-align: center;
+  color: white;
+  background-color: #027D25;
+}
 #derB{
   margin-top: 3%;    
 	padding-bottom: 6.8%;
@@ -205,7 +213,9 @@ padding: 8px;
 
 
 }
-
+/**
+Configuracion del responsive
+**/
 
 @media only screen and (min-width : 768px) and (max-width : 1024px){
 
