@@ -126,6 +126,27 @@ margin-right: 8%;
     background-color: #0E06FA;
     color: white;
 }
+div.static {
+    position: relative;
+    border: 3px solid #73AD21;
+}
+
+div.static h1{
+    
+    
+}
+div.Activ {
+    position: static;
+    border: 3px solid #73AD21;
+}
+
+div.Activ h1{
+    text-align: center;
+}
+
+#Enviar{
+    position: relative;
+}
 
 .button {
 display: inline-block;
