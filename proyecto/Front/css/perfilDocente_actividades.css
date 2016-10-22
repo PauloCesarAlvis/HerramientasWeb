@@ -148,6 +148,9 @@ margin-right: 8%;
     transition: all .3s ease-out;
 }
 
+#listaActividades li a{
+  display: inline-block;
+}
 #derB{
   margin-top: 3%;    
   padding-bottom: 6.8%;
